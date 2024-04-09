@@ -445,10 +445,9 @@ header .icon span:hover{
 .container {
     max-width: 1120px;
     width: 100%;
-    padding: 40px 0;
+    padding: 20px 0;
     display: flex;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
+    /*grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));*/
 }
 
 .workout-grid {
