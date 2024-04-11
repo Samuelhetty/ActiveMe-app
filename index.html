@@ -28,13 +28,13 @@
     <div class="logo">
         <img src="./assets/images/icon.png" alt="ActiveMe Logo">
     </div>
-    <div class="icon">
-        <span class="icon-closed">
-            <ion-icon name="close-outline"></ion-icon>
-        </span>
-    </div>
     
     <nav class="nav-list">
+        <div class="icon">
+            <span class="icon-closed">
+                <ion-icon name="close-outline"></ion-icon>
+            </span>
+        </div>
         
             <a href="#home">Home</a>
             <a href="#about">About Us</a>
@@ -51,7 +51,7 @@
         </span>
     </div>
 </header>
-
+<div class="main-container">
 <section class="home" id="home">
     <div class="wrapper">
         <span class="icon-close">
@@ -130,6 +130,7 @@
         <button class="btnLogin-popup1" id="form-open1">Join Now</button>
     </div>
 </section>
+
       <!-- 
         - Section about
      -->
@@ -169,6 +170,8 @@
         </div>
     </div>
 </section>
+
+
 
 <section class="workout" id="workout">
     <h1 class="heading"> <span>workout</span> plans </h1>
@@ -272,32 +275,71 @@
     </div>
 </section>
 
+
+
  <!-- Section BMI -->
-<section>
+
+ <section>
     <div class="BMI" id="BMI">
         <div class="container">
             <div class="image-holder">
-                <img src="./assets/images/bmi.jpg" alt="BMI banner">
+               <img src="./assets/images/bmi.jpg" alt="BMI banner">
+            </div>   
+         <div class="box">
+              <h1>BMI Calculator</h1>
+            <div class="content">
+
+
+                <div class="input">
+                    <label for="height">Age</label>
+                    <input type="text" class="text-input" id="age" autocomplete="off" required/>
+                </div>
+
+                <div class="gender">
+
+                  <label class="container">
+                    <input type="radio" name="radio" id="m"><p class="text">Male</p>
+                    <span class="checkmark"></span>
+                  </label>
+
+
+                  <label class="container">
+                    <input type="radio" name="radio" id="f" ><p class="text">Female</p>
+                      <span class="checkmark"></span>
+                    </label>
+
+                </div>
+
+                <div class="containerHW">
+                    <div class="inputH">
+                     <label for="height">Height(cm)</label>
+                     <input type="number" id="height" required>
+                    </div>
+
+                    <div class="inputW">
+                      <label for="weight">Weight(kg)</label>
+                     <input type="number" id="weight" required>
+                    </div>
+                </div>
+
+                <button class="calculate" id="submit" onclick="calculate();">Calculate BMI</button>
             </div>
-            <div class="bmi-cal">
-                <h1 class="heading"> BMI Calculator</h1>
-                <form action="#">
-                    <div class="input-box">
-                        <input type="age" id="age" required>
-                        <label for="age">Enter your age:</label>
-                    </div>
-                    <div class="input-box">
-                        <input type="number" id="height" required>
-                        <label for="height">Enter your height (inches):</label>
-                    </div>
-                    <div class="input-box">
-                        <input type="number" id="weight" required>
-                        <label for="weight">Enter your weight (kg):</label>
-                    </div>
-                    <button type="button" onclick="calculateBMI()" class="btn-login">Calculate BMI</button>
-                </form>
+            <div class="result">
+              <p>Your BMI is</p>
+                <div id="bmi-result">00.00</div>
+                  <p class="comment"></p>
             </div>
-            <div id="bmi-result"></div>
+        </div>
+    </div>
+
+
+
+<!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p id="modalText"></p>
         </div>
     </div>
 </section>
@@ -305,6 +347,7 @@
 
       
 <!-- Section Calories Burned -->
+
 <section>
     <div class="calories" id="calories burned">
         <div class="container">
@@ -331,6 +374,7 @@
 </section>
 
 <!-- Section contact -->
+
 <section>
     <div class="contact" id="contact">
         <div class="container">
@@ -369,6 +413,7 @@
         </div>
     </div>
 </section>
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!--custom js link -->
